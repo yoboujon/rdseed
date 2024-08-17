@@ -33,9 +33,9 @@ CC = cc
 #CFLAGS = -O -m64 -g -mmacosx-version-min=10.4
 
 #else
-CFLAGS = -O -m64 -g
+CFLAGS = -O -m64 -g -Wno-incompatible-pointer-types -Wno-implicit-int -Wno-implicit-function-declaration -lnsl -ltirpc
 
-INCLUDE    = -I../Include
+INCLUDE    = -I../Include -I/usr/include/tirpc
 
 CFLAGSLINE = "$(INCLUDE) $(CFLAGS)"
 
